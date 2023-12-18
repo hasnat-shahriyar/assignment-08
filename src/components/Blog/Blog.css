@@ -41,10 +41,14 @@
   font-weight: 700;
   line-height: 160%;
 }
+.info h3:hover {
+  text-decoration: underline;
+}
 .info p {
   color: rgba(17, 17, 17, 0.6);
   font-weight: 600;
   line-height: 160%;
+  cursor: text;
 }
 .bookmark {
   display: flex;
@@ -65,4 +69,50 @@
   width: 730px;
   text-align: left;
   margin-left: 10%;
+  cursor: text;
+}
+.title:hover {
+  text-decoration: underline;
+}
+.hashtag {
+  text-align: left;
+  margin-left: 10%;
+}
+.hashtag span a {
+  text-decoration: none;
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 160%;
+}
+.read-time {
+  cursor: text;
+}
+.btn-bookmark {
+  background: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  color: #6047ec;
+}
+.btn-bookmark:hover {
+  color: #cf1007;
+}
+.mark-container {
+  text-align: left;
+  margin-left: 9%;
+}
+.btn-mark {
+  background: none;
+  border: none;
+  color: #6047ec;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.btn-mark:hover {
+  text-decoration: underline;
+  color: #cf1007;
 }

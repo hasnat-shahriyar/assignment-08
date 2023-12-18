@@ -29,14 +29,17 @@ const Blog = ({blog, AddToBookmark, MarkAsRead}) => {
                 </div>
             </div>
             <h2 className='title'>{title}</h2>
-            <p>
+            <p className='hashtag'>
                 {
                     hashtags.map((hash, idx) => <span key = {idx}> <a href=''>#{hash}</a> </span>)
                 }
             </p>
-            <button onClick={() => MarkAsRead(id, reading_time)} className='btn-mark'>
-                Mark As Read
-            </button>
+            
+            <div className='mark-container'>
+                <button onClick={() => MarkAsRead(id, reading_time)} className='btn-mark'>
+                    Mark As Read
+                </button>
+            </div>
         </div>
     );
 };
