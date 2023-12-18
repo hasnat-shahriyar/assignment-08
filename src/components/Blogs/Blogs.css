@@ -1,0 +1,9 @@
+.blog-container {
+  width: 845px;
+  height: 840px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 50px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}

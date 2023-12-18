@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Blog from "../Blog/Blog";
-const Blogs = () => {
+import './Blogs.css';
+const Blogs = ({AddToBookmark, MarkAsRead}) => {
     const [blogs, setBlogs] = useState([]);
     useEffect(()=>{
         fetch ('blogs.json')
@@ -8,14 +9,21 @@ const Blogs = () => {
         .then (data => setBlogs(data))
     }, []);
     return (
-        <div>
-            <h1>Blogs : {blogs.length}</h1>
-            {
-                blogs.map(blg => <Blog
-                key = {blg.id}
-                blog = {blg}
-                ></Blog>)
-            }
+        <div className='main-container'>
+            <div className="blog-item-container">
+                <h1>Blogs : {blogs.length}</h1>
+                {
+                    blogs.map(blg => <Blog
+                    key = {blg.id}
+                    blog = {blg}
+                    AddToBookmark={AddToBookmark}
+                    MarkAsRead={MarkAsRead}
+                    ></Blog>)
+                }
+            </div>
+            <div className="blog-bookmarked-container">
+                
+            </div>
         </div>
     );
 };
