@@ -2,8 +2,9 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Blog.css';
-const Blog = ({blog, AddToBookmark, MarkAsRead}) => {
-    const {id, title, cover, author, author_img, posted_date, reading_time, hashtags} = blog;
+const Blog = ({blog, AddToBookmark, handleMarkAsRead, bookmarkedBlogs}) => {
+    const {id, title, cover, author, author_img, posted_date, reading_time, hashtags} = blog || {};
+    const bookmarkBtnClass = bookmarkedBlogs.findIndex(i=>i.id === id) < 0 ? "inactive_btn_bookmark" : "active_btn_bookmark"
     
     return (
         <div className='blog-container'>
@@ -22,7 +23,7 @@ const Blog = ({blog, AddToBookmark, MarkAsRead}) => {
                     <p className='read-time'>{reading_time} min read</p>
                     <button 
                     onClick={() => AddToBookmark(blog)}
-                    className='btn-bookmark'
+                    className={`btn-bookmark ${bookmarkBtnClass}`}
                     >
                         <FontAwesomeIcon icon={faBookmark} />
                     </button>
@@ -36,7 +37,7 @@ const Blog = ({blog, AddToBookmark, MarkAsRead}) => {
             </p>
             
             <div className='mark-container'>
-                <button onClick={() => MarkAsRead(blog)} className='btn-mark'>
+                <button onClick={() => handleMarkAsRead(blog)} className='btn-mark'>
                 Mark As Read
                 </button>
             </div>

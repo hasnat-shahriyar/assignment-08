@@ -2,11 +2,11 @@ import React from 'react';
 import MarkAsRead from '../MarkAsRead/MarkAsRead';
 import './Bookmark.css';
 
-const Bookmark = ({ bookmarkedBlogs, totalReadingTime }) => {
+const Bookmark = ({ bookmarkedBlogs, totalReadingTime, markAsRead }) => {
   return (
     <>
     <div className='bookmark-container'>
-    <MarkAsRead totalReadingTime={totalReadingTime} />
+    <MarkAsRead totalReadingTime={totalReadingTime} markAsRead={markAsRead} />
       <div className='bookmark-card'>
         <h2 className='bookmarked-blogs'>Bookmarked Blogs: {bookmarkedBlogs.length}</h2>
         {bookmarkedBlogs.map((blog, index) => (

@@ -1,9 +1,9 @@
 // Blogs.jsx
 import React, { useEffect, useState } from 'react';
-import Blog from '../Blog/Blog';
+import Blog from './Blog/Blog';
 import './Blogs.css';
 
-const Blogs = ({ AddToBookmark, MarkAsRead, setBlogs }) => {
+const Blogs = ({ AddToBookmark, handleMarkAsRead, setBlogs , bookmarkedBlogs}) => {
   const [blogs, setBlogsState] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,8 @@ const Blogs = ({ AddToBookmark, MarkAsRead, setBlogs }) => {
             key={blg.id}
             blog={blg}
             AddToBookmark={AddToBookmark}
-            MarkAsRead={MarkAsRead}
+            handleMarkAsRead={handleMarkAsRead}
+            bookmarkedBlogs={bookmarkedBlogs}
           />
         ))}
       </div>
