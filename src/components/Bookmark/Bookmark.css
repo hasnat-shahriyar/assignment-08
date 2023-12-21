@@ -1,0 +1,38 @@
+.bookmark-container {
+  width: 411px;
+  min-height: auto;
+  border-radius: 8px;
+  background: rgba(17, 17, 17, 0.05);
+  position: absolute;
+  top: 235px;
+  right: 30px;
+  padding: 20px;
+}
+
+.bookmarked-blogs {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.book-title {
+  width: 380px;
+  height: 10vh;
+  text-align: center;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.book-title:hover {
+  background: rgba(96, 71, 236, 0.1);
+  border: 1px solid #6047ec;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

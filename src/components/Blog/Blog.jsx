@@ -36,12 +36,12 @@ const Blog = ({blog, AddToBookmark, MarkAsRead}) => {
             </p>
             
             <div className='mark-container'>
-                <button onClick={() => MarkAsRead(id, reading_time)} className='btn-mark'>
-                    Mark As Read
+                <button onClick={() => MarkAsRead(blog)} className='btn-mark'>
+                Mark As Read
                 </button>
             </div>
-        </div>
-    );
+            </div>
+  );
 };
 
 export default Blog;

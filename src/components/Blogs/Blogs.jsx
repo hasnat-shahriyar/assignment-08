@@ -1,3 +1,4 @@
+// Blogs.jsx
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 import './Blogs.css';
@@ -23,7 +24,7 @@ const Blogs = ({ AddToBookmark, MarkAsRead, setBlogs }) => {
             key={blg.id}
             blog={blg}
             AddToBookmark={AddToBookmark}
-            MarkAsRead={(blog) => MarkAsRead(blog)}
+            MarkAsRead={MarkAsRead}
           />
         ))}
       </div>

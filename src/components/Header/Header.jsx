@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
     return (
         <header>
-            <h1>Knowledge Cafe</h1>
+            <h1 className='knowledge-title'>Knowledge Cafe</h1>
             <img src={profile} alt="" />
         </header>
     );

@@ -1,4 +1,3 @@
-// Bookmark.jsx
 import React from 'react';
 import MarkAsRead from '../MarkAsRead/MarkAsRead';
 import './Bookmark.css';
@@ -6,13 +5,15 @@ import './Bookmark.css';
 const Bookmark = ({ bookmarkedBlogs, totalReadingTime }) => {
   return (
     <>
-      <MarkAsRead totalReadingTime={totalReadingTime} />
-      <div>
-        <h2>Bookmarked Blogs: {bookmarkedBlogs.length}</h2>
+    <div className='bookmark-container'>
+    <MarkAsRead totalReadingTime={totalReadingTime} />
+      <div className='bookmark-card'>
+        <h2 className='bookmarked-blogs'>Bookmarked Blogs: {bookmarkedBlogs.length}</h2>
         {bookmarkedBlogs.map((blog, index) => (
-          <h2 key={index}>Title: {blog.title}</h2>
+          <h2 className='book-title' key={index}>Title: {blog.title}</h2>
         ))}
       </div>
+    </div>
     </>
   );
 };
